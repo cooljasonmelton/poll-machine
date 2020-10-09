@@ -5,14 +5,20 @@
     <title>Poll Machine</title>
   </head>
   <body>
-      <canvas class="poll-results"></canvas>
-      <div class="o-container">
-          <button class="option-a">A</button>
-          <button class="option-b">B</button>
-          <button class="option-c">C</button>
-          <button class="option-d">D</button>
-      </div>
-      <script src="node_modules/chart.js/dist/Chart.js"></script>
-      <script src="index.js" defer></script>
+    <div class="c-container"> 
+        <canvas id="r-chart"></canvas>           
+    </div>
+    <div class="o-container">
+        <h3 class="r-header">Results:</h3>
+        <p id='a-text' class="results">A:0</p>
+        <p id='b-text' class="results">B:0</p>
+        <p id='c-text' class="results">C:0</p>
+        <h3 class="r-header">Vote:</h3>
+        <button id="a-btn" class="option">A</button>
+        <button id="b-btn" class="option">B</button>
+        <button id="c-btn" class="option">C</button>
+    </div>
+    <script src="node_modules/chart.js/dist/Chart.js" defer></script>
+    <script src="index.js" defer></script>
   </body>
 </html>
