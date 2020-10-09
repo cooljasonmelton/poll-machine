@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{ 
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    background-color: #E6EEF0;
+    
+    font: 20px monospace;
+}
+
+button { 
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+}
+button:focus {
+    outline: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.option-a{
+    background-color: #56A3A6;
+}
+.option-b{
+    background-color: #DB504A;
+}
+.option-c{
+    background-color: #E3B505;
+}
+.option-d{
+    background-color: #D499FF;
+}
