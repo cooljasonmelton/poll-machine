@@ -1,6 +1,7 @@
 const run = () =>  {
     const btnArr = [...document.getElementsByClassName('option')];
     const txtArr = [...document.getElementsByClassName('results')];
+    const chartCvs = document.getElementById('r-chart')
 
     let resultA = 0
     let resultB = 0
@@ -24,7 +25,22 @@ const run = () =>  {
         })
     }
 
+
+    const addChart = () => {
+        console.log(chartCvs)
+    }
+
+    const sampleChart = () => {
+        return new Chart(chartCvs, {
+            type: 'bar',
+            data: null,
+            options: null
+        });
+    };
+
     clickableBtns()
+    addChart()
+    sampleChart()
 }
 
 run()
