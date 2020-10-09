@@ -11,12 +11,13 @@ const run = () =>  {
         if (choice === 'a') resultA++
         if (choice === 'b') resultB++
         if (choice === 'c') resultC++
-        return txtArr.map(txt=> {
+        txtArr.map(txt=> {
             let ch = txt.id.charAt(0)
             if (ch === 'a') return txt.innerHTML = `A:${resultA}`
             if (ch === 'b') return txt.innerHTML = `B:${resultB}`
             if (ch === 'c') return txt.innerHTML = `C:${resultC}`
         })
+        addChart()
     }
 
     const clickableBtns = () => {
@@ -25,21 +26,60 @@ const run = () =>  {
         })
     }
 
-
     const addChart = () => {
-        console.log(chartCvs)
-    }
-
-    const sampleChart = () => {
         return new Chart(chartCvs, {
             type: 'bar',
-            data: null,
-            options: null
+            data: {
+                datasets: [{
+                    maxBarThickness: 100,
+                    label: ['A'],
+                    data: [resultA],
+                    backgroundColor: ['rgba(14, 110, 184)'],
+                    borderColor: ['rgba(135, 108, 108)'],
+                    borderWidth: 1
+                },
+                {
+                    maxBarThickness: 100,
+                    label: ['B'],
+                    data: [resultB],
+                    backgroundColor: ['rgba(14, 110, 184)'],
+                    borderColor: ['rgba(135, 108, 108)'],
+                    borderWidth: 1
+                },
+                {
+                    maxBarThickness: 100,
+                    label: ['C'],
+                    data: [resultC],
+                    backgroundColor: ['rgba(14, 110, 184)'],
+                    borderColor: ['rgba(135, 108, 108)'],
+                    borderWidth: 1
+                }
+            ]},
+            options: {
+                title: {
+                    display: true,
+                    text: "Results"
+                },
+                responsive: true,
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            display: true,
+                            beginAtZero: true
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            display: true,
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
         });
     };
 
     clickableBtns()
-    addChart()
     sampleChart()
 }
 
