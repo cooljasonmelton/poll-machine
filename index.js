@@ -31,27 +31,27 @@ const run = () =>  {
             type: 'bar',
             data: {
                 datasets: [{
-                    maxBarThickness: 100,
+                    maxBarThickness: 70,
                     label: ['A'],
                     data: [resultA],
-                    backgroundColor: ['rgba(14, 110, 184)'],
-                    borderColor: ['rgba(135, 108, 108)'],
+                    backgroundColor: ['#56A3A6'],
+                    borderColor: ['gray'],
                     borderWidth: 1
                 },
                 {
-                    maxBarThickness: 100,
+                    maxBarThickness: 70,
                     label: ['B'],
                     data: [resultB],
-                    backgroundColor: ['rgba(14, 110, 184)'],
-                    borderColor: ['rgba(135, 108, 108)'],
+                    backgroundColor: ['#DB504A'],
+                    borderColor: ['gray'],
                     borderWidth: 1
                 },
                 {
-                    maxBarThickness: 100,
+                    maxBarThickness: 70,
                     label: ['C'],
                     data: [resultC],
-                    backgroundColor: ['rgba(14, 110, 184)'],
-                    borderColor: ['rgba(135, 108, 108)'],
+                    backgroundColor: ['#E3B505'],
+                    borderColor: ['gray'],
                     borderWidth: 1
                 }
             ]},
@@ -60,14 +60,7 @@ const run = () =>  {
                     display: true,
                     text: "Results"
                 },
-                responsive: true,
                 scales: {
-                    xAxes: [{
-                        ticks: {
-                            display: true,
-                            beginAtZero: true
-                        }
-                    }],
                     yAxes: [{
                         ticks: {
                             display: true,
@@ -80,7 +73,7 @@ const run = () =>  {
     };
 
     clickableBtns()
-    sampleChart()
+    addChart()
 }
 
 run()
