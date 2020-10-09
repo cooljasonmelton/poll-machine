@@ -17,10 +17,10 @@ const run = () =>  {
             if (ch === 'b') return txt.innerHTML = `B:${resultB}`
             if (ch === 'c') return txt.innerHTML = `C:${resultC}`
         })
-        console.log(chart.data.datasets[0].data)
-        chart.data.datasets[0].data = resultA
-        chart.data.datasets[1].data = resultB
-        chart.data.datasets[2].data = resultC
+
+        chart.data.datasets[0].data = [resultA]
+        chart.data.datasets[1].data = [resultB]
+        chart.data.datasets[2].data = [resultC]
         chart.update()
     }
 
