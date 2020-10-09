@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{ 
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font: 20px monospace;
+}
+
+button { 
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+}
+button:focus {
+    outline: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
