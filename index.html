@@ -5,20 +5,28 @@
     <title>Poll Machine</title>
   </head>
   <body>
+    
     <div class="c-container"> 
+        <!-- chart.js attaches to canvas element -->
         <canvas id="r-chart"></canvas>           
     </div>
+
     <div class="o-container">
-        <h3 class="r-header">Results:</h3>
-        <p id='a-text' class="results">A:0</p>
-        <p id='b-text' class="results">B:0</p>
-        <p id='c-text' class="results">C:0</p>
+      <!-- Vote Buttons -->
         <h3 class="r-header">Vote:</h3>
         <button id="a-btn" class="option">A</button>
         <button id="b-btn" class="option">B</button>
         <button id="c-btn" class="option">C</button>
+      <!-- Results Text -->
+        <h3 class="r-header">Results:</h3>
+        <p id='a-text' class="results">0</p>
+        <p id='b-text' class="results">0</p>
+        <p id='c-text' class="results">0</p>
     </div>
+    
+    <!-- chart.js library -->
     <script src="node_modules/chart.js/dist/Chart.js" defer></script>
+    
     <script src="index.js" defer></script>
   </body>
 </html>
