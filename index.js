@@ -7,15 +7,21 @@ const run = () =>  {
     let resultB = 0
     let resultC = 0
 
+    const clickableBtns = () => {
+        return btnArr.map(btn => {
+            return btn.addEventListener('click', () => updateVote(btn.id.charAt(0), newChart))
+        })
+    }
+
     const updateVote = (choice, chart) => {
         if (choice === 'a') resultA++
         if (choice === 'b') resultB++
         if (choice === 'c') resultC++
         txtArr.map(txt=> {
             let ch = txt.id.charAt(0)
-            if (ch === 'a') return txt.innerHTML = `A:${resultA}`
-            if (ch === 'b') return txt.innerHTML = `B:${resultB}`
-            if (ch === 'c') return txt.innerHTML = `C:${resultC}`
+            if (ch === 'a') return txt.innerHTML = resultA
+            if (ch === 'b') return txt.innerHTML = resultB
+            if (ch === 'c') return txt.innerHTML = resultC
         })
 
         chart.data.datasets[0].data = [resultA]
@@ -24,15 +30,8 @@ const run = () =>  {
         chart.update()
     }
 
-    const clickableBtns = () => {
-        return btnArr.map(btn => {
-            return btn.addEventListener('click', () => updateVote(btn.id.charAt(0), newChart))
-        })
-    }
-
     const newChart = new Chart(chartCvs, {
         type: 'bar',
-        labels: 'Results',
         data: {
             datasets: [{
                 maxBarThickness: 70,
@@ -64,9 +63,7 @@ const run = () =>  {
                 display: true,
                 text: ["Results"]
             },
-            tooltips: {
-                enabled: false
-            },
+            tooltips: { enabled: false },
             scales: {
                 yAxes: [{
                     ticks: {

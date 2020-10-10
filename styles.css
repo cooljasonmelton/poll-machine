@@ -10,7 +10,7 @@ body{
     align-items: center;
     justify-content: center;
 
-    background-color: #E6EEF0;
+    background-color: #F2F6F7;
     
     font: 20px monospace;
 }
@@ -23,10 +23,8 @@ button:focus {
     outline: none;
 }
 button:hover{
+    opacity: 0.9;
     cursor: pointer;
-}
-button:active{
-    background-color: #084C61;
 }
 
 .r-header{
@@ -34,8 +32,6 @@ button:active{
 }
 
 .o-container{
-    height: 5em;
-    width: 10em;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -55,7 +51,5 @@ button:active{
 
 /* CHART */
 .c-container{
-    width: 50%;
-    height: 50%;
-
+    width: 60%;
 }
