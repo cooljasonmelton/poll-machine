@@ -1,3 +1,3 @@
 # poll-machine
 
-<img src="" alt="demo" width="100%">
+<img src="https://github.com/cooljasonmelton/poll-machine/blob/main/poll-machine-demo.gif?raw=true" alt="demo" width="100%">
