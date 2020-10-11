@@ -15,12 +15,14 @@ const run = () =>  {
     // ADD CLICK LISTENER TO BTNS
     const clickableBtns = () => {
         return btnArr.map(btn => {
-            return btn.addEventListener('click', () => updateVote(btn.id.charAt(0), newChart))
+            return btn.addEventListener('click', () => updateVote(btn.id.charAt(0)))
         })
     }
 
 
-    const updateVote = (choice, chart) => {
+
+
+    const updateVote = (choice) => {
         // ADD ONE TO CHOICE
         if (choice === 'a') resultA++
         if (choice === 'b') resultB++
@@ -35,10 +37,10 @@ const run = () =>  {
         })
 
         // UPDATE CHART DATA
-        chart.data.datasets[0].data = [resultA]
-        chart.data.datasets[1].data = [resultB]
-        chart.data.datasets[2].data = [resultC]
-        chart.update()
+        newChart.data.datasets[0].data = [resultA]
+        newChart.data.datasets[1].data = [resultB]
+        newChart.data.datasets[2].data = [resultC]
+        newChart.update()
     }
 
     // CHART SPECS
@@ -87,6 +89,7 @@ const run = () =>  {
             }
         }
     });
+
     clickableBtns()
 }
 run()
